@@ -8,7 +8,9 @@ export default function Page() {
   return (
     <View style={styles.container}>
     
-        <FlatList  data={products} renderItem={({item})=><ProductListItem product={item} />
+        <FlatList  data={products} 
+        numColumns={2}
+        renderItem={({item})=><ProductListItem product={item} />
       }/>
        
        
@@ -20,8 +22,9 @@ export default function Page() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    padding: 24,
+    flexDirection:"row",
+    objectFit:"fill",
+    padding: 6,
     backgroundColor:"#ddd"
   },
  
